@@ -44,6 +44,8 @@ package.json
 /man/
 /share/
 /src/
+/venv/
+/venv
 
 # avoid adding it after generation from tsconfig command
 tsconfig.json
