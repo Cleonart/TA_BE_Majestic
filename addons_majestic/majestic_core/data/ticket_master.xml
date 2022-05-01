@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- [1] Ticket Manado to Biaro -->
+        <record id="mdo_to_biaro_vip_dws" model="ticket.master">
+            <field name="ticket_code">MJS0010</field>
+            <field name="place_origin">manado</field>
+            <field name="place_destination">biaro</field>
+            <field name="passenger_category">dewasa</field>
+            <field name="ticket_class">vip</field>
+            <field name="ticket_price">195000</field>
+        </record>
+        <record id="mdo_to_biaro_vip_ank" model="ticket.master">
+            <field name="ticket_code">MJS0011</field>
+            <field name="place_origin">manado</field>
+            <field name="place_destination">biaro</field>
+            <field name="passenger_category">anak</field>
+            <field name="ticket_class">vip</field>
+            <field name="ticket_price">165000</field>
+        </record>
+        <record id="mdo_to_biaro_eks_dws" model="ticket.master">
+            <field name="ticket_code">MJS0012</field>
+            <field name="place_origin">manado</field>
+            <field name="place_destination">biaro</field>
+            <field name="passenger_category">dewasa</field>
+            <field name="ticket_class">eksekutif</field>
+            <field name="ticket_price">170000</field>
+        </record>
+        <record id="mdo_to_biaro_eks_ank" model="ticket.master">
+            <field name="ticket_code">MJS0013</field>
+            <field name="place_origin">manado</field>
+            <field name="place_destination">biaro</field>
+            <field name="passenger_category">anak</field>
+            <field name="ticket_class">eksekutif</field>
+            <field name="ticket_price">140000</field>
+        </record>
+
+        <!-- [2] Ticket Manado to Tagulandang -->
+        <record id="mdo_to_tagulandang_vip_dws" model="ticket.master">
+            <field name="ticket_code">MJS0020</field>
+            <field name="place_origin">manado</field>
+            <field name="place_destination">tagulandang</field>
+            <field name="passenger_category">dewasa</field>
+            <field name="ticket_class">vip</field>
+            <field name="ticket_price">235000</field>
+        </record>
+        <record id="mdo_to_tagulandang_vip_ank" model="ticket.master">
+            <field name="ticket_code">MJS0021</field>
+            <field name="place_origin">manado</field>
+            <field name="place_destination">tagulandang</field>
+            <field name="passenger_category">anak</field>
+            <field name="ticket_class">vip</field>
+            <field name="ticket_price">205000</field>
+        </record>
+        <record id="mdo_to_tagulandang_eks_dws" model="ticket.master">
+            <field name="ticket_code">MJS0022</field>
+            <field name="place_origin">manado</field>
+            <field name="place_destination">tagulandang</field>
+            <field name="passenger_category">dewasa</field>
+            <field name="ticket_class">eksekutif</field>
+            <field name="ticket_price">195000</field>
+        </record>
+        <record id="mdo_to_tagulandang_eks_ank" model="ticket.master">
+            <field name="ticket_code">MJS0023</field>
+            <field name="place_origin">manado</field>
+            <field name="place_destination">tagulandang</field>
+            <field name="passenger_category">anak</field>
+            <field name="ticket_class">eksekutif</field>
+            <field name="ticket_price">165000</field>
+        </record>
+        <record id="mdo_to_tagulandang_eco_dws" model="ticket.master">
+            <field name="ticket_code">MJS0024</field>
+            <field name="place_origin">manado</field>
+            <field name="place_destination">tagulandang</field>
+            <field name="passenger_category">dewasa</field>
+            <field name="ticket_class">ekonomi</field>
+            <field name="ticket_price">165000</field>
+        </record>
+        <record id="mdo_to_tagulandang_eco_ank" model="ticket.master">
+            <field name="ticket_code">MJS0025</field>
+            <field name="place_origin">manado</field>
+            <field name="place_destination">tagulandang</field>
+            <field name="passenger_category">anak</field>
+            <field name="ticket_class">ekonomi</field>
+            <field name="ticket_price">150000</field>
+        </record>
+
+        <!-- [3] Ticket Manado to Siau -->
+        <record id="mdo_to_siau_vip_dws" model="ticket.master">
+            <field name="ticket_code">MJS0030</field>
+            <field name="place_origin">manado</field>
+            <field name="place_destination">siau</field>
+            <field name="passenger_category">dewasa</field>
+            <field name="ticket_class">vip</field>
+            <field name="ticket_price">260000</field>
+        </record>
+        <record id="mdo_to_siau_vip_ank" model="ticket.master">
+            <field name="ticket_code">MJS0031</field>
+            <field name="place_origin">manado</field>
+            <field name="place_destination">siau</field>
+            <field name="passenger_category">anak</field>
+            <field name="ticket_class">vip</field>
+            <field name="ticket_price">230000</field>
+        </record>
+        <record id="mdo_to_siau_eks_dws" model="ticket.master">
+            <field name="ticket_code">MJS0032</field>
+            <field name="place_origin">manado</field>
+            <field name="place_destination">siau</field>
+            <field name="passenger_category">dewasa</field>
+            <field name="ticket_class">eksekutif</field>
+            <field name="ticket_price">220000</field>
+        </record>
+        <record id="mdo_to_siau_eks_ank" model="ticket.master">
+            <field name="ticket_code">MJS0033</field>
+            <field name="place_origin">manado</field>
+            <field name="place_destination">siau</field>
+            <field name="passenger_category">anak</field>
+            <field name="ticket_class">eksekutif</field>
+            <field name="ticket_price">190000</field>
+        </record>
+        <record id="mdo_to_siau_eco_dws" model="ticket.master">
+            <field name="ticket_code">MJS0034</field>
+            <field name="place_origin">manado</field>
+            <field name="place_destination">siau</field>
+            <field name="passenger_category">dewasa</field>
+            <field name="ticket_class">ekonomi</field>
+            <field name="ticket_price">185000</field>
+        </record>
+        <record id="mdo_to_siau_eco_ank" model="ticket.master">
+            <field name="ticket_code">MJS0035</field>
+            <field name="place_origin">manado</field>
+            <field name="place_destination">siau</field>
+            <field name="passenger_category">anak</field>
+            <field name="ticket_class">ekonomi</field>
+            <field name="ticket_price">170000</field>
+        </record>
+
+        <!-- [4] Ticket Manado to Para -->
+        <record id="mdo_to_para_vip_dws" model="ticket.master">
+            <field name="ticket_code">MJS0040</field>
+            <field name="place_origin">manado</field>
+            <field name="place_destination">para</field>
+            <field name="passenger_category">dewasa</field>
+            <field name="ticket_class">vip</field>
+            <field name="ticket_price">270000</field>
+        </record>
+        <record id="mdo_to_para_vip_ank" model="ticket.master">
+            <field name="ticket_code">MJS0041</field>
+            <field name="place_origin">manado</field>
+            <field name="place_destination">para</field>
+            <field name="passenger_category">anak</field>
+            <field name="ticket_class">vip</field>
+            <field name="ticket_price">240000</field>
+        </record>
+        <record id="mdo_to_para_eks_dws" model="ticket.master">
+            <field name="ticket_code">MJS0042</field>
+            <field name="place_origin">manado</field>
+            <field name="place_destination">para</field>
+            <field name="passenger_category">dewasa</field>
+            <field name="ticket_class">eksekutif</field>
+            <field name="ticket_price">230000</field>
+        </record>
+        <record id="mdo_to_para_eks_ank" model="ticket.master">
+            <field name="ticket_code">MJS0043</field>
+            <field name="place_origin">manado</field>
+            <field name="place_destination">para</field>
+            <field name="passenger_category">anak</field>
+            <field name="ticket_class">eksekutif</field>
+            <field name="ticket_price">200000</field>
+        </record>
+
+        <!-- [5] Ticket Manado to Kahakitang -->
+        <record id="mdo_to_kahakitang_vip_dws" model="ticket.master">
+            <field name="ticket_code">MJS0050</field>
+            <field name="place_origin">manado</field>
+            <field name="place_destination">kahakitang</field>
+            <field name="passenger_category">dewasa</field>
+            <field name="ticket_class">vip</field>
+            <field name="ticket_price">270000</field>
+        </record>
+        <record id="mdo_to_kahakitang_vip_ank" model="ticket.master">
+            <field name="ticket_code">MJS0051</field>
+            <field name="place_origin">manado</field>
+            <field name="place_destination">kahakitang</field>
+            <field name="passenger_category">anak</field>
+            <field name="ticket_class">vip</field>
+            <field name="ticket_price">240000</field>
+        </record>
+        <record id="mdo_to_kahakitang_eks_dws" model="ticket.master">
+            <field name="ticket_code">MJS0052</field>
+            <field name="place_origin">manado</field>
+            <field name="place_destination">kahakitang</field>
+            <field name="passenger_category">dewasa</field>
+            <field name="ticket_class">eksekutif</field>
+            <field name="ticket_price">230000</field>
+        </record>
+        <record id="mdo_to_kahakitang_eks_ank" model="ticket.master">
+            <field name="ticket_code">MJS0053</field>
+            <field name="place_origin">manado</field>
+            <field name="place_destination">kahakitang</field>
+            <field name="passenger_category">anak</field>
+            <field name="ticket_class">eksekutif</field>
+            <field name="ticket_price">200000</field>
+        </record>
+
+        <!-- [6] Ticket Manado to Tahuna -->
+        <record id="mdo_to_tahuna_vip_dws" model="ticket.master">
+            <field name="ticket_code">MJS0060</field>
+            <field name="place_origin">manado</field>
+            <field name="place_destination">tahuna</field>
+            <field name="passenger_category">dewasa</field>
+            <field name="ticket_class">vip</field>
+            <field name="ticket_price">280000</field>
+        </record>
+        <record id="mdo_to_tahuna_vip_ank" model="ticket.master">
+            <field name="ticket_code">MJS0061</field>
+            <field name="place_origin">manado</field>
+            <field name="place_destination">tahuna</field>
+            <field name="passenger_category">anak</field>
+            <field name="ticket_class">vip</field>
+            <field name="ticket_price">250000</field>
+        </record>
+        <record id="mdo_to_tahuna_eks_dws" model="ticket.master">
+            <field name="ticket_code">MJS0062</field>
+            <field name="place_origin">manado</field>
+            <field name="place_destination">tahuna</field>
+            <field name="passenger_category">dewasa</field>
+            <field name="ticket_class">eksekutif</field>
+            <field name="ticket_price">240000</field>
+        </record>
+        <record id="mdo_to_tahuna_eks_ank" model="ticket.master">
+            <field name="ticket_code">MJS0063</field>
+            <field name="place_origin">manado</field>
+            <field name="place_destination">tahuna</field>
+            <field name="passenger_category">anak</field>
+            <field name="ticket_class">eksekutif</field>
+            <field name="ticket_price">210000</field>
+        </record>
+        <record id="mdo_to_tahuna_eco_dws" model="ticket.master">
+            <field name="ticket_code">MJS0064</field>
+            <field name="place_origin">manado</field>
+            <field name="place_destination">tahuna</field>
+            <field name="passenger_category">dewasa</field>
+            <field name="ticket_class">ekonomi</field>
+            <field name="ticket_price">195000</field>
+        </record>
+        <record id="mdo_to_tahuna_eco_ank" model="ticket.master">
+            <field name="ticket_code">MJS0065</field>
+            <field name="place_origin">manado</field>
+            <field name="place_destination">tahuna</field>
+            <field name="passenger_category">anak</field>
+            <field name="ticket_class">ekonomi</field>
+            <field name="ticket_price">180000</field>
+        </record>
+
+    </data>
+</odoo>
