@@ -37,5 +37,5 @@ class ControllerMain(http.Controller):
     @http.route(['/api/v1/model/<string:model>/<string:method>'],
                 cors='*', csrf=False, csrf_token=False, type='json', auth='public')
     def call_kw(self, model, method, *args, **kwargs):
-        request.session.authenticate('JAP_DB', 'admin', 'admin')
+        request.session.authenticate('TA_BE_MAJESTIC', 'admin', 'admin')
         return self._call_kw(model, method, *args, **kwargs)
