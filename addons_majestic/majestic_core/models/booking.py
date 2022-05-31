@@ -2,6 +2,7 @@
 from odoo import api, fields, models
 from ..utils.common import TICKET_PASSENGER_CATEGORY, PAYMENT_METHOD
 
+
 class MasterBooking(models.Model):
     _name = 'booking.master'
     _description = 'Master Booking Data'
@@ -11,6 +12,13 @@ class MasterBooking(models.Model):
     ticket_number = fields.Char(
         string='Ticket Number',
         related='ticket_id.ticket_code')
+    ticket_departure = fields.Selection(
+        related='ticket_id.place_origin',
+        string='Ticket Departure')
+    ticket_destination = fields.Selection(
+        related='ticket_id.place_destination',
+        string='Ticket Destination')
+    departure_date = fields.Date(string='Booking Departure Date')
     passenger_name = fields.Char(string='Passenger Name')
     passenger_category = fields.Selection(
         TICKET_PASSENGER_CATEGORY,

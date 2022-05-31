@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from datetime import date
 from odoo import api, fields, models
 from odoo.exceptions import ValidationError
 from ..utils.common import TICKET_CLASS, TICKET_LOCATIONS, TICKET_PASSENGER_CATEGORY
@@ -26,6 +27,19 @@ class TicketMaster(models.Model):
     ticket_price = fields.Float(string='Ticket Price')
 
     @api.model
+    def get_available_ticket(self, payload={}) -> int:
+        ticket_id: int = payload.get('ticket_id')
+        ticket_date: date = payload.get('ticket_date')
+
+        booking_obj: models.Model = self.env['booking.master']
+        number_of_booked_ticket: int = booking_obj.search_count([
+            ('ticket_id', '=', ticket_id),
+            ('departure_date', '=', ticket_date),
+        ])
+
+        return 50 - number_of_booked_ticket
+
+    @api.model
     def check(self, payload={}) -> dict:
         """ To check if ticket is available
             Args:
@@ -47,19 +61,20 @@ class TicketMaster(models.Model):
         if not payload.get('destination'):
             raise ValidationError('Tempat Lokasi tujuan harus dipilih')
         if not payload.get('passenger_category'):
-            raise ValidationError('Jumlah penumpang dewasa atau anak harus dipilih')
+            raise ValidationError(
+                'Jumlah penumpang dewasa atau anak harus dipilih')
         if payload.get('ticket_class'):
             domain.append(('ticket_class', '=', payload.get('ticket_class')),)
 
         return self.search_read(
             domain=domain,
             fields=[
-            "ticket_code",
-            "place_origin",
-            "place_destination",
-            "passenger_category",
-            "ticket_class",
-            "ticket_price"])
+                "ticket_code",
+                "place_origin",
+                "place_destination",
+                "passenger_category",
+                "ticket_class",
+                "ticket_price"])
 
 # class MasterOrderTicket(models.Model):
 #     _name = "ticket.master"
@@ -102,5 +117,3 @@ class TicketMaster(models.Model):
 #     ], string='Category')
 #     email = fields.Char(string='Email')
 #     phone = fields.Char(string='Phone Number')
-
-    
