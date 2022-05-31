@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from email.policy import default
 from odoo import api, fields, models
 from ..utils.common import TICKET_PASSENGER_CATEGORY, PAYMENT_METHOD
 
@@ -18,6 +19,9 @@ class MasterBooking(models.Model):
     ticket_destination = fields.Selection(
         related='ticket_id.place_destination',
         string='Ticket Destination')
+    ticket_price = fields.Float(
+        related='ticket_id.ticket_price',
+        string='Ticket Price')
     departure_date = fields.Date(string='Booking Departure Date')
     passenger_name = fields.Char(string='Passenger Name')
     passenger_category = fields.Selection(
@@ -28,6 +32,12 @@ class MasterBooking(models.Model):
     payment_method = fields.Selection(
         PAYMENT_METHOD,
         string='Payment Method')
+    is_confirmed = fields.Boolean(string='Confirmed', default=False)
+
+    def confirm(self):
+        self.write({
+            'is_confirmed': True
+        })
 
 # class MasterOrderTicket(models.Model):
 #     _name = "ticket.master"
